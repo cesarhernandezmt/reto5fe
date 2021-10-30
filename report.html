@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo 3 - Reto 5 - Reportes</title>
+    <style>
+        table, th, td {
+          border: 1px solid gray;
+          border-collapse: collapse;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/fn_report.js"></script>
+
+</head>
+
+<body>
+    <center>
+    <h1 align="center"> Ciclo 3 - Reto 5 </h1>
+
+    <h2> Reportes. </h2>
+
+    <div>
+        <h3><b>Reporte: Cantidad de Reservaciones por Estado.</b></h3>
+        <p>Para consultar el reporte de la cantidad de reservaciones en estado</p>
+        <p>completado y cancelado, de clic en el botón 'Consultar Reporte'.</p>
+        <fieldset style="width: 35%">
+            <div align="center" id="resultado-status"></div>
+        </fieldset>
+        <br />
+        <button onclick="traerReportStatus()"> Consultar Reporte</button>
+        <br />
+    </div>
+    <br />
+    <br />
+    <div>
+        <h3><b>Reporte: Cantidad de Reservaciones en un Tiempo Determinado.</b></h3>
+        <p>Para consultar el reporte de la cantidad de reservaciones que se han realizado en un</p>
+        <p>intervalo de tiempo determinado, ingrese los datos de las fechas en los</p>
+        <p>campos del formulario y de de clic en el botón 'Consultar Reporte'.</p>
+        <fieldset style="width: 35%">
+            <div align="center" id="resultado-dates"></div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset style="width: 35%">
+            <legend>Datos del Registro para el Reporte:</legend>
+            <table align="center">
+                <tr>
+                    <td><b>FECHA DE INICIO:</b></td>
+                    <td><input type="date" id="startDate" placeholder="startDate" required></td>
+                </tr>
+                <tr>
+                    <td><b>FECHA DE FINALIZACION:</b></td>
+                    <td><input type="date" id="devolutionDate" placeholder="devolutionDate" required></td>
+                </tr>
+            </table>
+        </fieldset>
+        <br />
+        <button onclick="traerReportDates()"> Consultar Reporte</button>
+        <br />
+    <!--<br />
+        <button onclick="guardarElemento()"> Guardar </button>
+        <br /> -->
+    </div>
+    <br />
+    <br />
+    <div>
+        <h3><b>Reporte: Mejores Clientes.</b></h3>
+        <p>Para consultar el reporte del 'Top' de los clientes que por medio de sus reservaciones,
+        <p>han representado la mayor cantidad de ingresos, de clic en el botón 'Consultar Reporte'.</p>
+        <fieldset style="width: 35%">
+            <div align="center" id="resultado-clients"></div>
+        </fieldset>
+        <br />
+        <button onclick="traerReportClients()"> Consultar Reporte</button>
+        <br />
+    </div>
+    <br />
+    <br />
+    <div>
+        <p>Para volver a la pagina de inicio de clic en el botón 'Inicio':</p>
+        <button onclick="window.location.href='/reto5fe/index.html'"> Inicio </button>
+    </div>
+    </center>
+</body>
+
+</html>

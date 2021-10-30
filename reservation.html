@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo 3 - Reto 5 - Reservaciones</title>
+    <style>
+        table, th, td {
+          border: 1px solid gray;
+          border-collapse: collapse;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/fn_reservation.js"></script>
+
+</head>
+
+<body>
+    <center>
+    <h1 align="center"> Ciclo 3 - Reto 5 </h1>
+
+    <h2> Reservaciones. </h2>
+
+    <div>
+        <h3><b>Consulta de Registros:</b></h3>
+        <p>Para consultar la tabla de registros de clic en el botón 'Consultar'.</p>
+        <fieldset style="width: 45%">
+            <div align="center" id="resultado"></div>
+        </fieldset>
+        <br />
+        <button onclick="traerInformacion()"> Consultar </button>
+        <br />
+    </div>
+    <br />
+    <div>
+        <h3><b>Agregar/Actualizar Registros:</b></h3>
+        <p><i>Recuerde verificar que hayan Médicos y Clientes registrados antes de añadir registros de Reservaciones.</i></p>
+        <p><i>Calificación de '0' (Cero) = Pendiente por Calificación.</i></p>
+        <p>Ingrese y seleccione los datos del registro en los campos del formulario:</p>
+        <p>1. Para agregar un nuevo registro de clic en el botón 'Guardar'.</p>
+        <p>2. Para actualizar un registro existente, en la tabla de consulta</p>
+        <p>de clic en el botón 'Actualizar'.</p>
+        <br />
+        <fieldset style="width: 35%">
+            <legend>Datos del Registro:</legend>
+            <table align="center">
+                <tr>
+                    <td><b>FECHA DE INICIO:</b></td>
+                    <td><input type="date" id="startDate" placeholder="startDate" required></td>
+                </tr>
+                <tr>
+                    <td><b>FECHA DE DEVOLUCION:</b></td>
+                    <td><input type="date" id="devolutionDate" placeholder="devolutionDate" required></td>
+                </tr>
+                <td><b>ESTADO:</b></td>
+                <td><select id="status">
+                    <option value="created">creada</option><option value="scheduled">programada</option>
+                    <option value="completed">completada</option><option value="cancelled">cancelada</option>
+                    </select>
+                </td>                
+                <tr>
+                    <td><b>NOMBRE DEL MEDICO:</b></td>
+                    <td><select id="select-doctor"></select></td>
+                </tr>
+                <tr>
+                    <td><b>NOMBRE DEL CLIENTE:</b></td>
+                    <td><select id="select-client"></select></td>
+                </tr>
+                <tr>
+                    <td><b>CALIFICACION DE LA RESERVACION:</b></td>
+                    <td><select id="select-score">
+                     <!--<option value="5">5</option><option value="4">4</option>
+                        <option value="3">3</option><option value="2">2</option>
+                        <option value="1">1</option> -->
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+
+    <br />
+    <button onclick="guardarElemento()"> Guardar </button>
+
+    <br />
+    <p>Para volver a la pagina de inicio de clic en el botón 'Inicio':</p>
+    <button onclick="window.location.href='/reto5fe/index.html'"> Inicio </button>
+    
+    <div>
+        <script type="text/javascript">
+            inicioDoctor();
+            inicioClient();
+            inicioScore();
+        </script>
+    </div>     
+    </center>
+</body>
+
+</html>

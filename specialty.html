@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo 3 - Reto 5 - Especialidades</title>
+    <style>
+        table, th, td {
+          border: 1px solid gray;
+          border-collapse: collapse;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/fn_specialty.js"></script>
+
+</head>
+
+<body>
+    <center>
+    <h1 align="center"> Ciclo 3 - Reto 5 </h1>
+
+    <h2> Especialidades. </h2>
+
+    <div>
+        <h3><b>Consulta de Registros:</b></h3>
+        <p>Para consultar la tabla de registros de clic en el botón 'Consultar'.</p>
+        <fieldset style="width: 35%">
+            <div align="center" id="resultado"></div>
+        </fieldset>
+        <br />
+        <button onclick="traerInformacion()"> Consultar </button>
+        <br />
+    </div>
+    <br />
+    <div>
+        <h3><b>Agregar/Actualizar Registros:</b></h3>
+        <p>Ingrese los datos del registro en los campos del formulario:</p>
+        <p>1. Para agregar un nuevo registro de clic en el botón 'Guardar'.</p>
+        <p>2. Para actualizar un registro existente, en la tabla de consulta</p>
+        <p>de clic en el botón 'Actualizar'.</p>
+        <br />
+        <fieldset style="width: 35%">
+            <legend>Datos del Registro:</legend>
+            <table align="center">
+                <tr>
+                    <td><b>NOMBRE:</b></td>
+                    <td><input type="text" id="name" placeholder="name" required></td>
+                </tr>
+                <tr>
+                    <td><b>DESCRIPCION:</b></td>
+                    <td><input type="text" id="description" placeholder="description" required></td>
+                </tr>
+            </table>
+        </fieldset>
+
+    </div>
+
+    <br />
+    <button onclick="guardarElemento()"> Guardar </button>
+
+    <br />
+    <p>Para volver a la pagina de inicio de clic en el botón 'Inicio':</p>
+    <button onclick="window.location.href='/reto5fe/index.html'"> Inicio </button>  
+    </center>
+</body>
+
+</html>
