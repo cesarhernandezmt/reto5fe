@@ -1,7 +1,7 @@
 function inicioSpecialty(){
 
     $.ajax({
-        url:"http://129.151.121.62:8081/api/Specialty/all",
+        url:"http://129.151.121.62:8082/api/Specialty/all",
         type:"GET",
         datatype:"JSON",
         contentType: "application/json",
@@ -25,7 +25,7 @@ function inicioSpecialty(){
 function traerInformacion(){
 
     $.ajax({
-        url:"http://129.151.121.62:8081/api/Doctor/all",
+        url:"http://129.151.121.62:8082/api/Doctor/all",
         type:"GET",
         datatype:"JSON",
         contentType: "application/json",
@@ -96,7 +96,7 @@ function guardarElemento(){
         let dataToSend=JSON.stringify(myData);
 
         $.ajax({
-            url:"http://129.151.121.62:8081/api/Doctor/save",
+            url:"http://129.151.121.62:8082/api/Doctor/save",
             type:"POST",
             data:dataToSend,
             datatype:"JSON",
@@ -144,7 +144,7 @@ function editarElemento(idElemento){
         let dataToSend=JSON.stringify(myData);
 
         $.ajax({
-            url:"http://129.151.121.62:8081/api/Doctor/update",
+            url:"http://129.151.121.62:8082/api/Doctor/update",
             type:"PUT",
             data:dataToSend,
             contentType:"application/JSON",
@@ -181,7 +181,7 @@ function borrarElemento(idElemento){
     let dataToSend=JSON.stringify(myData);
     
     $.ajax({
-        url:"http://129.151.121.62:8081/api/Doctor/"+idElemento,
+        url:"http://129.151.121.62:8082/api/Doctor/"+idElemento,
         type:"DELETE",
         data:dataToSend,
         datatype:"JSON",

@@ -1,7 +1,7 @@
 function inicioDoctor(){
 
     $.ajax({
-        url:"http://129.151.121.62:8081/api/Doctor/all",
+        url:"http://129.151.121.62:8082/api/Doctor/all",
         type:"GET",
         datatype:"JSON",
         contentType: "application/json",
@@ -25,7 +25,7 @@ function inicioDoctor(){
 function inicioClient(){
 
     $.ajax({
-        url:"http://129.151.121.62:8081/api/Client/all",
+        url:"http://129.151.121.62:8082/api/Client/all",
         type:"GET",
         datatype:"JSON",
         contentType: "application/json",
@@ -49,7 +49,7 @@ function inicioClient(){
 function inicioScore(){
 
     $.ajax({
-        url:"http://129.151.121.62:8081/api/Score/all",
+        url:"http://129.151.121.62:8082/api/Score/all",
         type:"GET",
         datatype:"JSON",
         contentType: "application/json",
@@ -73,7 +73,7 @@ function inicioScore(){
 function traerInformacion(){
 
     $.ajax({
-        url:"http://129.151.121.62:8081/api/Reservation/all",
+        url:"http://129.151.121.62:8082/api/Reservation/all",
         type:"GET",
         datatype:"JSON",
         contentType: "application/json",
@@ -148,7 +148,7 @@ function guardarElemento(){
         console.log(dataToSend);
 
         $.ajax({
-            url:"http://129.151.121.62:8081/api/Reservation/save",
+            url:"http://129.151.121.62:8082/api/Reservation/save",
             type:"POST",
             data:dataToSend,
             datatype:"JSON",
@@ -198,7 +198,7 @@ function editarElemento(idElemento){
         let dataToSend=JSON.stringify(myData);
 
         $.ajax({
-            url:"http://129.151.121.62:8081/api/Reservation/update",
+            url:"http://129.151.121.62:8082/api/Reservation/update",
             type:"PUT",
             data:dataToSend,
             contentType:"application/JSON",
@@ -234,7 +234,7 @@ function borrarElemento(idElemento){
 
     let dataToSend=JSON.stringify(myData);
     $.ajax({
-        url:"http://129.151.121.62:8081/api/Reservation/"+idElemento,
+        url:"http://129.151.121.62:8082/api/Reservation/"+idElemento,
         type:"DELETE",
         data:dataToSend,
         datatype:"JSON",
