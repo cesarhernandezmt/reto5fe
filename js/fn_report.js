@@ -26,12 +26,10 @@ function mostrarReportStatus(respuesta){
     myTable+="<th>"+"RESERVACIONES CANCELADAS"+"</th>";
     myTable+="<tr>";
 
-    for(i=0;i<respuesta.length;i++){
-        myTable+="<tr>";
-        myTable+="<td>"+respuesta[i].completed+"</td>";
-        myTable+="<td>"+respuesta[i].cancelled+"</td>";
-        myTable+="</tr>"
-    }
+    myTable+="<tr>";
+    myTable+="<td><center>"+respuesta.completed+"</center></td>";
+    myTable+="<td><center>"+respuesta.cancelled+"</center></td>";
+    myTable+="</tr>"
 
     myTable+="</table>";
     $("#resultado-status").html(myTable);
